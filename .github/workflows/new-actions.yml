@@ -1,0 +1,10 @@
+name: new-actions
+on:
+  push:
+    branches: [main]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - run: echo "new workflow with an action"
