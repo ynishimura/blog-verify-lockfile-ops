@@ -8,4 +8,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6.1.0
+      - uses: actions/cache@v4
+        with:
+          path: ~/.cache/dummy
+          key: dummy-${{ runner.os }}
       - run: echo "build"
